@@ -17,7 +17,7 @@ if [ ! -d "$WKHTMLTOPDF_PATH" ]; then
 	wget --quiet --continue --output-document="$XZ_FILENAME" "$WKHTMLTOPDF_URL"
 
 	echo '-----> Extracting wkhtmltopdf'
-	tar --xz --extract --file "$XZ_FILENAME" --directory "$CACHE_DIR"
+	tar --verbose --xz --extract --file "$XZ_FILENAME" --directory "$CACHE_DIR"
 	rm "$XZ_FILENAME"
 fi
 
